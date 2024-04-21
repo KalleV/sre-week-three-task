@@ -19,6 +19,9 @@ spec:
             - containerPort: 5003
           imagePullPolicy: Always
           resources:
+            requests:
+              cpu: "250m"  # Reduced from 1 to 250m
+              memory: "500Mi"  # Reduced from 4Gi to 500Mi
             limits:
-              cpu: "1"
-              memory: "4Gi"
+              cpu: "500m"  # Reduced from 1 to 500m
+              memory: "1Gi"  # Reduced from 4Gi to 1Gi
